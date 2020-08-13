@@ -1,0 +1,31 @@
+
+<div class="row mt-4">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <table class="table border table-bordered table-striped">
+            <tr>
+                <th *ngFor="let header of tableHeaders">{{header}}</th>
+            </tr>
+            <tr *ngFor="let studentdetail of  acceptstudentdetails,let ind=index">
+                <td>{{ind+1}}</td>
+                <td>{{studentdetail.firstname}}</td>
+                <td>{{studentdetail.lastname}}</td>
+                <td>{{studentdetail.emailid}}</td>
+                <td>{{studentdetail.batchnumber}}</td>
+                <td>{{studentdetail.mobile}}</td>
+                <td>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="{{studentdetail.emailid}}"
+                            (click)="status(studentdetail)" [checked]=studentdetail.status>
+                        <label class="custom-control-label" for={{studentdetail.emailid}}></label>
+                    </div>
+                </td>
+
+                <td><button type="button" class="btn btn-danger" (click)="deleteData(ind,studentdetail)"><i
+                            class="fas fa-trash-alt"></i></button></td>
+
+            </tr>
+        </table>
+    </div>
+    <div class="col-sm-2"></div>
+</div>

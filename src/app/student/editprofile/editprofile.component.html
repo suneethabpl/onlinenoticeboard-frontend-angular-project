@@ -1,0 +1,102 @@
+<div class="jumbotron">
+    <div class="bg-dark text-white text-center mt-5 pt-1 pb-1">
+        <h4>Profile Form</h4>
+    </div>
+
+
+    <div class="container mt-5">
+        <div class="modal" id="edit">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">EDIT PROFILE</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                     
+
+
+                        <form [formGroup]=profileForm (ngSubmit)="updateProfile()">
+
+
+                            <label for="firstname">first name</label>
+                            <div class="input-group input-group-home">
+
+                                <input type="text" formControlName="firstname" class="form-control" id="firstname"
+                                    placeholder="Type Your Batch number">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"> <i class="fa fa-user icon"></i> </div>
+                                </div>
+                            </div>
+
+                            <label for="lastname">last name</label>
+                            <div class=input-group>
+
+                                <input type="text" formControlName="lastname" class="form-control" id="subject"
+                                    placeholder="Type Your subject">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"> <i class="fa fa-user icon"></i> </div>
+                                </div>
+                            </div>
+
+                            <label for="emailid">Emailid</label>
+                            <div class=input-group>
+
+                                <input type="text" formControlName="emailid" class=form-control id="emailid"
+                                    placeholder="Type message">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"> <i class="fa fa-user icon"></i> </div>
+                                </div>
+                            </div>
+
+
+                            <label for="mobile">Mobilenumber</label>
+                            <div class=input-group>
+                                <input type="number" formControlName="mobile" class=form-control id="mobile"
+                                    placeholder="Type Your Password">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-lock icon"></i> </div>
+                                </div>
+                            </div>
+
+
+
+                            <button type="submit" class="btncss registerbtn">UPDATE</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <table style="width:100%">
+        <tr>
+            <th>FirstName:</th>
+            <td>{{student.firstname}}</td>
+        </tr>
+        <tr>
+            <th>LastName:</th>
+            <td>{{student.lastname}}</td>
+        </tr>
+
+        <tr>
+            <th>Emailid:</th>
+            <td>{{student.emailid}}</td>
+        </tr>
+        <tr>
+            <th>MobileNumber:</th>
+            <td>{{student.mobile}}</td>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#edit"><i
+                        class="far fa-edit"></i></button></td>
+        </tr>
+    </table>

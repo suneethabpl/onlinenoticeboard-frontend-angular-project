@@ -1,0 +1,23 @@
+<p>viewnotice works!</p>
+<div class="jumbotron bg-secondary mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h6 style="text-align:center;">Notifications</h6>
+        </div>
+        <div class="card-body">
+            <table class="table border table-bordered table-striped">
+                <tr>
+                    <th *ngFor="let noticeheader of tnoticeHeaders">{{noticeheader}}</th>
+                </tr>
+                <tr *ngFor="let noticedetail of  acceptnoticedetails,let ind=index">
+                    <td>{{ind+1}}</td>
+                    <td>{{noticedetail.batchnumber}}</td>
+                    <td>{{noticedetail.subject}}</td>
+                    <td>{{noticedetail.message}}</td>
+                    <td>{{noticedetail.date}}</td>
+         
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

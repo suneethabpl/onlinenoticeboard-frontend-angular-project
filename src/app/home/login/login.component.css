@@ -1,0 +1,33 @@
+
+.login-info {
+
+    border: 5px solid white;
+    margin-top: 30px;
+    margin-left: 94px;
+
+    box-shadow: 1px 1px 1px grey;
+    list-style: none;
+
+}
+
+
+.login-info:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 25px solid white;
+    margin: -30px 0px 0px 43px;
+
+}
+
+.login-info li {
+  
+    margin-left: -39px;
+    color: white;
+    background: #ff4729;
+    font-size: 15px;
+    text-align: center;
+}

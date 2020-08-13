@@ -1,0 +1,42 @@
+
+.navbar-nav {
+    list-style: none;
+
+}
+
+.navbar-nav li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navbar-nav li a {
+    text-transform: uppercase;
+    color: #fff;
+    padding: 8px;
+    font-weight: 700;
+    position: relative;
+}
+
+.navbar-nav li a::after {
+    position: absolute;
+    width: 0;
+    left: 50%;
+    top: 100%;
+    content: "";
+    border-bottom: 2px solid #fff;
+    transition: 0.9s ease all;
+}
+
+.navbar-nav li a:hover:after,
+.nav_links li.active a:after {
+    width: 100%;
+    left: 0;
+    border-bottom: 2px solid #fff;
+}
+
+
+
+.tablealign {
+    margin-right: 20px;
+    margin-top: -23px;
+}

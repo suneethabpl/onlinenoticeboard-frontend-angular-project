@@ -1,0 +1,44 @@
+
+
+
+
+
+
+<div class="header-top"></div>
+<header>
+    <div class="pagewidth">
+        <nav class="nav">
+            <a href="#"><img style="height:100px;" src="assets/images/desktop.jpeg" alt="logo"></a>
+            <ul class="menu">
+                <li class="active"><a routerLink="/">Home</a></li>
+                <li>
+                    <a routerLink="managenotice">Manage notice<i class="fa fa-chevron-down"></i>
+                    
+                    </a>
+                </li>
+           
+                <li><a routerLink="viewadmin">view</a></li>
+         
+                <button type="button" (click)="logout()">logout</button>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section class="banner">
+    <div class="pagewidth">
+        <div class="banner-left">
+            <div class="banner-left-content">
+                <h1>Goodbye noticeboard.<br> Hello Online Noticeboard.</h1>
+                <p>A powerful platform for faculty and students, from <br> suthra technologies</p>
+                <a class="banner-left-content-btn" href="#">Try Online notice board now</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

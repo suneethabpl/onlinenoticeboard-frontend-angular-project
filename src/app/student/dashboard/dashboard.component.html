@@ -1,0 +1,173 @@
+<body>
+
+    <div class="page-wrapper chiller-theme toggled">
+
+
+        <a id="show-sidebar" class="btn btn-sm btn-dark">
+            <i class="fa fa-bars"></i>
+        </a>
+
+
+        <nav class="nav" id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="#">pro sidebar</a>
+                  
+                </div>
+
+
+
+                <div class="sidebar-header">
+                    <div class="user-pic">
+                   
+                        <img src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                            alt="User picture">
+                    </div>
+              
+
+
+                    <div class="user-info">
+                        <span class="user-name">Hi
+                            <strong>Lakshman</strong>
+                        </span>
+                        <span class="user-role">User</span>
+                        <span class="user-status">
+                            <i class="fa fa-circle"></i>
+                            <span>Online</span>
+                        </span>
+                    </div>
+
+                </div>
+
+
+
+             
+
+
+                <!-- sidebar-search  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>General</span>
+                        </li>
+
+                        <li class="sidebar-dropdown ">
+                            <a routerLink="#">
+                                <i class="fa fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Dashboard 1
+
+                                            <span class="badge badge-pill badge-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dashboard 2</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+
+                        <li class="sidebar-dropdown">
+                            <a routerLink="viewnotice">
+                                <i class="fa fa-user"></i>
+                                <span>notifications</span>
+                                <span class="badge badge-pill badge-warning">New</span>
+                            
+
+
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Products
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Orders</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+                        <li class="sidebar-dropdown">
+                          
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">General</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Forms</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+                        <li class="sidebar-dropdown">
+                            <a routerLink="editprofile">
+                                <i class="fa fa-book"></i>
+                                <span>Update profile</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-dropdown">
+                            <a routerLink="editpassword">
+                                <i class="fa fa-lock"></i>
+                                <span>Update passwd</span>
+                            </a>
+
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-content  -->
+
+            <div class="sidebar-footer">
+                <a href="#">
+                    <i class="fa fa-bell"></i>
+                    <span class="badge badge-pill badge-warning notification">3</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-envelope"></i>
+                    <span class="badge badge-pill badge-success notification">7</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-cog"></i>
+                    <span class="badge-sonar"></span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-power-off"></i>
+                </a>
+            </div>
+        </nav>
+
+
+        <!-- sidebar-wrapper  -->
+        <main class="page-content">
+            <div class="container-fluid">
+            
+                <nav class="nav navbar navbar-expand-lg navbar-dark  bg-dark">
+                    <a class="navbar-band nav-link text-white" href="#">Hi {{firstname}}</a>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                      
+                            <button type="button" (click)="logout()">logout</button>
+                        </li>
+                    </ul>
+                </nav>
+                <router-outlet></router-outlet>
+            </div>
+        </main>
+
+    </div>

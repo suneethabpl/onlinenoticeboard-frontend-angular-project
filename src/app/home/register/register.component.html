@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="row bg-color">
+        <div class="col-sm-6 login-image">
+            <div class="img">
+                <img height="300px" width="300px" class="imgmiddle" src="assets/images/studentlogin.png" alt="student">
+
+            </div>
+        </div>
+
+
+        <div class="col-sm-6">
+         
+
+            <form [formGroup]=regForm (ngSubmit)="postData()">
+           
+                <div class="text-center heading">registration form</div>
+
+                <label for="firstname">FistName</label>
+                <div class="input-group input-group-home">
+
+                    <input type="text" formControlName=firstname class="form-control" id="email" name="email"
+                        placeholder="Type Your Fist Name">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"> <i class="fa fa-user icon"></i> </div>
+                    </div>
+                </div>
+
+                <label for="lastname">LastName</label>
+                <div class=input-group>
+
+                    <input type="text" formControlName=lastname class="form-control" id="email" name="email"
+                        placeholder="Type Your last Name">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"> <i class="fa fa-user icon"></i> </div>
+                    </div>
+                </div>
+
+                <label for=emailid>Email Id</label>
+                <div class=input-group>
+
+                    <input type="text" formControlName=emailid class=form-control id=email name=email placeholder="TypeYour Email Id">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"> <i class="fa fa-user icon"></i> </div>
+                    </div>
+                </div>
+
+
+                <label for=password>Password</label>
+                <div class=input-group>
+                    <input type="text" formControlName=password class=form-control id=password name=password
+                        placeholder="Type Your Password">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-lock icon"></i> </div>
+                    </div>
+                </div>
+
+
+                <label for="batchnumber">BatchNumber</label>
+                <div class=input-group>
+                    <input type="number" formControlName=batchnumber class=form-control id=password name=password
+                        placeholder="Type Your Role">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-user icon"></i> </div>
+                    </div>
+                </div>
+
+
+
+                <label for="mobile">MobileNumber</label>
+                <div class=input-group>
+                    <input type="number" formControlName=mobile class=form-control id=password name=password
+                        placeholder="Type Your mobile Number">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-user icon"></i> </div>
+                    </div>
+                </div>
+
+
+                <div class="forgotpwd">
+                    <a href="#" class="anclinks">Forgot Password?</a>
+                    <a href="#" class="anclinks">Register</a>
+
+                </div>
+
+
+                <button type=submit class="btncss registerbtn" [disabled]=!regForm.valid>submit</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+</div>

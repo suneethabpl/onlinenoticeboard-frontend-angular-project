@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row bg-color">
+        <div class="col-sm-6 login-image">
+            <div class="img">
+                <img height="300px" width="300px" src="assets/images/studentlogin.png" alt="student">
+
+            </div>
+        </div>
+
+
+        <div class="col-sm-6">
+     
+
+            <form #form=ngForm (ngSubmit)="login(form)">
+              
+                <div class="text-center heading">login form</div>
+                <label for=email>username</label>
+                <div class=input-group>
+
+                    <input type="text" class="form-control" name="username" ngModel id=username
+                        placeholder="Type Your Student Number">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"> <i class="fa fa-user icon"></i> </div>
+                    </div>
+                </div>
+
+
+                <label for=password>Password</label>
+                <div class=input-group>
+                    <input type=password class=form-control name="password" ngModel id=password name=password
+                        placeholder="Type Your Password">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fa fa-lock icon"></i> </div>
+                    </div>
+                </div>
+
+                <div class="forgotpwd">
+                    <a href="#" class="anclinks">Forgot Password?</a>
+                    <a href="#" class="anclinks">Register</a>
+                </div>
+
+
+                <button type=submit class="btncss" btn btn-primary btn-block mt-5>Login</button>
+                <ul class="login-info">
+                    <li>USER</li>
+                    <li>LOGIN</li>
+                    <li>AFTER</li>
+                    <li>ADMIN'S</li>
+                    <li>GIVEN</li>
+                    <li>ACCESS</li>
+                </ul>
+
+            </form>
+
+        </div>
+
+    </div>
+</div>
