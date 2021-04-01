@@ -15,13 +15,13 @@ form:any;
   ngOnInit(): void {
   }
 onSubmit(form):void{
-console.log(form);
-this.studentServ.updatePwd(form).subscribe(result=>{
-
+console.log(form);//there is no id in console so we send object only.
+this.studentServ.updatePwd(form).subscribe(result=>{//here we need to send form only not form.value to service file.
+  //in this form,we have new password,confirmpassword and current/old password.
   if(result.msg=='done'){
-    console.log(result);
+    console.log(result);//here result is object. we gave msg is in the object. 
     alert('password is updated');
-
+    // this.form.reset();
 
   }
   else{
@@ -32,9 +32,9 @@ this.studentServ.updatePwd(form).subscribe(result=>{
 }
 
 check(form):void{
-
+// console.log(form)
 if(form.newpassword!=form.confirmpassword ){
- 
+  // alert("pwd not matched");
   this.isTrue=true;
 }
 else{

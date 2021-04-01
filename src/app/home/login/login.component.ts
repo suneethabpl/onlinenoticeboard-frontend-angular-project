@@ -14,9 +14,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   login(form):void{
- 
+    // console.log(form.value);
     this.homeServ.signIn(form.value).subscribe(result=>{
-
+    // console.log(result);
     if(result.msg=='wrong password'){
     alert("invalid password");
     }else if(result.msg=='access denied'){

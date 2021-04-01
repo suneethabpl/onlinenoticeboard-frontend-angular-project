@@ -2,7 +2,7 @@
     <div class="bg-dark text-white text-center mt-5 pt-1 pb-1">
         <h4>Profile Form</h4>
     </div>
-
+    <!-- </div> -->
 
     <div class="container mt-5">
         <div class="modal" id="edit">
@@ -15,7 +15,7 @@
                     </div>
 
                     <div class="modal-body">
-                     
+                        <!-- <form [formGroup]=noticeForm (ngSubmit)="isUpdate?updateData():postData()"> -->
 
 
                         <form [formGroup]=profileForm (ngSubmit)="updateProfile()">
@@ -75,7 +75,20 @@
         </div>
     </div>
 
- 
+    <!-- <table class="table border table-bordered table-striped">
+        <tr>
+            <th *ngFor="let profileheader of tprofileHeaders">{{profileheader}}</th>
+        </tr>
+        <tr *ngFor="let profiledetail of  acceptprofiledetails,let ind=index">
+            <td>{{ind+1}}</td>
+            <td>{{profiledetail.firstname}}</td>
+            <td>{{profiledetail.lastname}}</td>
+            <td>{{profiledetail.emailid}}</td>
+            <td>{{profiledetail.mobile}}</td>
+            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#edit"
+                    (click)="editData(profiledetail)"><i class="far fa-edit"></i></button></td>
+        </tr>
+    </table> -->
 
     <table style="width:100%">
         <tr>

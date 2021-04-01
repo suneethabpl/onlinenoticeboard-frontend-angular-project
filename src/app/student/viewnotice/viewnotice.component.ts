@@ -7,7 +7,7 @@ import { StudentService } from 'src/app/shared/student.service';
   styleUrls: ['./viewnotice.component.css']
 })
 export class ViewnoticeComponent implements OnInit {
-notifications: any[]=[];
+notifications: any[]=[];//initially it has empty array.
 acceptnoticedetails:any;
 tnoticeHeaders:string[]=['S.NO','BATCHNUMBER','SUBJECT','MESSAGE','DATE'];
   constructor(private studentServ:StudentService) { }
@@ -15,7 +15,7 @@ tnoticeHeaders:string[]=['S.NO','BATCHNUMBER','SUBJECT','MESSAGE','DATE'];
   ngOnInit(): void {
     this.studentServ.rcvNotice().subscribe((data)=>{
       this. acceptnoticedetails=data;
-     
+      // console.log(data);
     })
   }
 

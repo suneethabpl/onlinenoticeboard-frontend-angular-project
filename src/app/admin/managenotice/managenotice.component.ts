@@ -21,7 +21,12 @@ export class ManagenoticeComponent implements OnInit {
    this.getData();
   }
   initForm(): void {
-  
+    // this.noticeForm = this.fb.group({
+    //   batchnumber: [''],
+    //   subject: [''],
+    //   message: [''],
+    //   date: ['']
+    // });
     this.noticeForm = this.fb.group({
       batchnumber: [this.data ? this.data['batchnumber']:''],
       subject: [this.data ? this.data['subject']:''],
@@ -47,12 +52,12 @@ editData(detail: object): void {
 }
 
 updateData(): void {
-  console.log(this.data['_id'])
+  console.log(this.data['_id'])//we can see id when we click edit and update.
   this.noticeForm.value._id=this.data['_id'];
-  console.log(this.noticeForm.value);
-
+  console.log(this.noticeForm.value);//this.profile.value has _id because we give it explicitly. 
+//     //not get/generate automatically. 
 this.adminServ.updateNotice(this.noticeForm.value).subscribe(result=>{
-
+// console.log(123)
 console.log(result);
 this.getData();
 this.isUpdate = false;

@@ -11,7 +11,7 @@ export class EditprofileComponent implements OnInit {
   tprofileHeaders: string[] = ['S.NO', 'FIRST NAME', 'LAST NAME', 'EMAILID', 'MOBILENUMBER', 'EDIT'];
   profileForm: any;
   acceptprofiledetails: [];
-
+  // data: object = {};
   data: any;
   student: any = {};
 
@@ -32,7 +32,7 @@ export class EditprofileComponent implements OnInit {
   }
 
   editData(detail: object): void {
-
+    // console.log(detail)
     this.data = detail;
     this.initForm();
 
@@ -40,7 +40,7 @@ export class EditprofileComponent implements OnInit {
 
   getData(): void {
     this.studentServ.rcvProfile().subscribe(result => {
- 
+      // console.log(result)
       this.acceptprofiledetails = result;
       this.student = result[0];
     })

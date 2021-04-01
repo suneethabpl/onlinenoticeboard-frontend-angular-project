@@ -9,10 +9,17 @@
 
 
         <div class="col-sm-6">
-     
+            <!--            
+                <form>
+                    <label>emailid</label>
+                <input type="text" name="username" ngModel class="form-control" placeholder="username">
+                <label>password</label>
+                <input type="password" name="password" ngModel class="form-control" placeholder="password">
+                <button type="submit" class="btn btn-success">login</button>
+            </form> -->
 
             <form #form=ngForm (ngSubmit)="login(form)">
-              
+                <!-- <form id=login_form> -->
                 <div class="text-center heading">login form</div>
                 <label for=email>username</label>
                 <div class=input-group>

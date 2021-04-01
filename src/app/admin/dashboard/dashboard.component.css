@@ -1,20 +1,39 @@
 
- 
+        /* .banner {
+        
+            background-image: url(../../../assets/images/banner-home.jpg);
+            background-size: cover;
+            height: 500px;
+            width: 100%;
+            position: relative;
+
+        } */
+
+
+
+
+
+       /*admin page*/
        body {
         margin: 0;
-
+        /*body has default margin and padding*/
         padding: 0;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f5f5f5;
     }
 
- 
+    /* ul{
+margin:0; ul has default margin and padding
+padding:0;
+} */
     li {
         list-style: none;
-  
+        /*remove list-style to nav elements */
     }
 
- 
+    /* a{
+text-decoration: none; remove underline under nav elements
+} */
     .header-top {
         position: absolute;
         margin: 0 auto;
@@ -37,25 +56,26 @@
 
     .pagewidth {
         max-width: 1100px;
-     
+        /*set page width and space between left and right of page*/
         margin: 0 auto;
-    
+        /*set page width and space between left and right of page*/
     }
 
     nav {
         display: flex;
-
+        /*logo and nav links display side by side*/
         justify-content: space-between;
-   
+        /*space between logo and links*/
+        /* margin: 34px 0; space between top and bottom */
         margin: 30px -71px;
         align-items: center;
-     
+        /* logo is aligned center to nav elements*/
 
     }
 
     .menu {
         display: flex;
-   
+        /*nav elements which are in li displays horizontially.*/
 
     }
 
@@ -148,7 +168,15 @@
         width: 20px;
     }
 
+    /* .menu_demo-btn{
+border: 1px solid white;
+border-radius: 4px;
+padding:0px 20px;
 
+}
+.menu_demo-btn::after{
+display: none;
+} */
     .menu li a.menu_demo-btn {
         border: 1px solid white;
         border-radius: 4px;
@@ -162,7 +190,7 @@
 
     .banner {
         background-image: url(../../../assets/images/banner-home.jpg);
-      
+        /* background-image: url(assets/images/banner-home.jpg); */
         background-size: cover;
         height: 500px;
         width: 100%;
@@ -207,6 +235,7 @@
         font-weight: 600;
         border-radius: 4px;
         padding: 15px 30px;
+        /* display:inline-flex; */
         display: inline-block;
     }
 

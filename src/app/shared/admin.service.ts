@@ -11,20 +11,25 @@ export class AdminService {
 
   readData():Observable<any> {
     let url=`${this.baseUrl}/api/admin/read`
-
+    // console.log(123)
     return this.http.get(url)
   }
   removeData(data:object): Observable<any> {
- 
+    // console.log(data)
     let url=`${this.baseUrl}/api/admin/remove/${data['_id']}`;
     return this.http.delete(url);
   }
 
- 
+  // createData(data: object): Observable<any> {
+  //   let url = `${this.baseUrl}/api/admin/create`
+  //   // console.log("i am from service",data)
+  //   return this.http.post(url, data)
+  // }
 
   updateData(data:object): Observable<any> {
-    let url=`${this.baseUrl}/api/admin/update` 
-    return this.http.put(url,data);
+    let url=`${this.baseUrl}/api/admin/update` //this url for data goes to backend/we send data to backend//here we give update because in admin.js, we give update in put handler
+    // console.log(data);
+    return this.http.put(url,data);//send the url and data to backend. 
   }
 
   postNotice(data:object):Observable<any>{
@@ -38,14 +43,15 @@ export class AdminService {
   }
 
   removeNotice(data:object): Observable<any> {
-
+    // console.log(data)
     let url=`${this.baseUrl}/api/admin/removenotice/${data['_id']}`;
     return this.http.delete(url);
   }
 
 
   updateNotice(data:object): Observable<any> {
-    let url=`${this.baseUrl}/api/admin/updatenotice` 
-    return this.http.put(url,data);
+    let url=`${this.baseUrl}/api/admin/updatenotice` //this url for data goes to backend/we send data to backend//here we give update because in admin.js, we give update in put handler
+    // console.log(data);
+    return this.http.put(url,data);//send the url and data to backend. 
   }
 }

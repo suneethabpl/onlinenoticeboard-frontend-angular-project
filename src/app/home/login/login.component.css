@@ -1,10 +1,11 @@
-
+/*login-button-style*/
 .login-info {
-
+    /* display: block;
+position: absolute; */
     border: 5px solid white;
     margin-top: 30px;
     margin-left: 94px;
-
+    /* text-align: left; */
     box-shadow: 1px 1px 1px grey;
     list-style: none;
 
@@ -20,11 +21,14 @@
     border-right: 20px solid transparent;
     border-bottom: 25px solid white;
     margin: -30px 0px 0px 43px;
-
+    /* border: 20px solid seagreen;
+border-bottom-color: white;
+top: -40px;
+left: 40px; */
 }
 
 .login-info li {
-  
+    /* padding: 20px; */
     margin-left: -39px;
     color: white;
     background: #ff4729;
